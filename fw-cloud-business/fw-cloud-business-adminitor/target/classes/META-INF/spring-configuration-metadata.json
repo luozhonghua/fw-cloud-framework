@@ -2,53 +2,53 @@
   "hints": [],
   "groups": [
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "name": "druid",
-      "type": "cloud.simple.service.conf.DruidProperties"
+      "type": "com.st.fox.admin.service.conf.DruidProperties"
     }
   ],
   "properties": [
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "name": "druid.driver-class",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "defaultValue": 0,
       "name": "druid.initial-size",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "defaultValue": 0,
       "name": "druid.max-active",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "defaultValue": 0,
       "name": "druid.min-idle",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "name": "druid.password",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "defaultValue": false,
       "name": "druid.test-on-borrow",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "name": "druid.url",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "cloud.simple.service.conf.DruidProperties",
+      "sourceType": "com.st.fox.admin.service.conf.DruidProperties",
       "name": "druid.username",
       "type": "java.lang.String"
     }

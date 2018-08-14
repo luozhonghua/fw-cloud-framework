@@ -30,9 +30,9 @@ pagehelper:
    params: count=countSql
 
 mybatis:
-  type-aliases-package: cloud.simple.service.model
+  type-aliases-package: com.st.fox.admin.service.model
   mapper-locations: classpath*:/mappers/**.xml
-  mappers: cloud.simple.service.util.MyMapper
+  mappers: MyMapper
   not-empty: true
   identity: MYSQL
   configuration.mapUnderscoreToCamelCase: true

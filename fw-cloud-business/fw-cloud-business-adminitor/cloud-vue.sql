@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2017-04-27 16:08:52
+Date: 2018-04-27 16:08:52
 */
 
 use cloud-vue
@@ -289,7 +289,7 @@ CREATE TABLE `sys_system_config` (
 -- ----------------------------
 -- Records of sys_system_config
 -- ----------------------------
-INSERT INTO `sys_system_config` VALUES ('1', 'SYSTEM_NAME', 'cloud-vue通用后台登录', '0', '1');
+INSERT INTO `sys_system_config` VALUES ('1', 'SYSTEM_NAME', 'ST-ERP', '0', '1');
 INSERT INTO `sys_system_config` VALUES ('2', 'SYSTEM_LOGO', 'uploads\\20170219\\d9fe7b784e1b1f406234b7b301e627e8.png', '0', '1');
 INSERT INTO `sys_system_config` VALUES ('3', 'LOGIN_SESSION_VALID', '1644', '0', '1');
 INSERT INTO `sys_system_config` VALUES ('4', 'IDENTIFYING_CODE', '0', '0', '1');
