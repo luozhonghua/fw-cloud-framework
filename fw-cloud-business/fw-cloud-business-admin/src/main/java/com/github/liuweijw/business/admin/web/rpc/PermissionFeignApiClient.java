@@ -33,6 +33,9 @@ public class PermissionFeignApiClient extends BaseController implements Permissi
 	@ApiOperation(httpMethod = GET, value = "通过角色获取菜单权限")
 	@ApiImplicitParam(name = "roleCode", value = "用户roleCode", required = true, dataType = "string", paramType = "path")
 	public Set<AuthPermission> findMenuByRole(@PathVariable("roleCode") String roleCode) {
+
+
+
 		Set<AuthPermission> permissions = new HashSet<AuthPermission>();
 		if (StringHelper.isBlank(roleCode)) return permissions;
 

@@ -1,5 +1,6 @@
 package cloud.simple.service.domain;
 
+import com.github.pagehelper.PageHelper;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ import cloud.simple.service.model.SysAdminUser;
 import cloud.simple.service.util.EncryptUtil;
 import cloud.simple.service.util.FastJsonUtils;
 import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
+
 @Service
 public class SysAdminUserService extends BaseServiceImpl<SysAdminUser>{
 	@Autowired
@@ -36,11 +40,11 @@ public class SysAdminUserService extends BaseServiceImpl<SysAdminUser>{
 			return FastJsonUtils.resultError(-400, "请先登录", null);
 		}
 		
-		if (StringUtils.isNotBlank(old_pwd)) {
+		if (!StringUtils.isNotBlank(old_pwd)) {
 			return FastJsonUtils.resultError(-400, "旧密码必填", null);
 		}
 		
-		if(StringUtils.isNotBlank(new_pwd)) {
+		if(!StringUtils.isNotBlank(new_pwd)) {
 			return FastJsonUtils.resultError(-400, "新密码必填", null);
 		}
 		
@@ -66,7 +70,14 @@ public class SysAdminUserService extends BaseServiceImpl<SysAdminUser>{
 	}
 
 	public PageInfo<SysAdminUser> getDataList(SysAdminUser record) {
-		return super.selectPage(record.getPage(), record.getRows(), record);
+
+        if (record.getPage() != null && record.getRows() != null) {
+            PageHelper.startPage(record.getPage(), record.getRows());
+        }
+        List<SysAdminUser> list=sysAdminUserDao.selectAll();
+        return  new PageInfo<SysAdminUser>(list);
+
+		//return super.selectPage(record.getPage(), record.getRows(), record);
 	}
 
 }

@@ -5,3 +5,5 @@
 .factorypath
 .iml
 .git
+.class
+*.iml

@@ -30,7 +30,7 @@ import com.github.liuweijw.system.api.model.AuthUser;
 /**
  * 用户管理服务
  * 
- * @author liuweijw
+ * @author luozhonghua
  */
 @RestController
 @Api(value = "用户信息", tags = ApiTag.TAG_DEFAULT)
@@ -79,6 +79,7 @@ public class UserController extends BaseController {
 	/**
 	 * 添加用户
 	 */
+	@ApiOperation(value = "添加用户信息", notes = "根据UserForm")
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	@PrePermissions(value = Functional.ADD)
 	public R<Boolean> add(HttpServletRequest request, @RequestBody UserForm userForm) {
@@ -91,11 +92,25 @@ public class UserController extends BaseController {
 	/**
 	 * 修改用户
 	 */
+	@ApiOperation(value = "修改用户信息", notes = "根据UserForm")
 	@RequestMapping(value = "/upd", method = RequestMethod.POST)
 	@PrePermissions(value = Functional.UPD)
 	public R<Boolean> upd(HttpServletRequest request, @RequestBody UserForm userForm) {
 		if (null == userForm.getUserId()) return new R<Boolean>().failure("用户不存在");
 		if (null == userForm.getDeptId()) return new R<Boolean>().failure("请选择部门");
+		if (null == userForm.getRoleId()) return new R<Boolean>().failure("请选择角色");
+
+		boolean r = this.userService.updateUserAndRoleDept(userForm);
+		return new R<Boolean>().data(r);
+	}
+
+
+	@ApiOperation(value = "修改用户信息", notes = "根据UserForm")
+	@RequestMapping(value = "/updateUser", method = RequestMethod.POST)
+	@PrePermissions(value = Functional.UPD)
+	public R<Boolean> updateUser(HttpServletRequest request, @RequestBody UserForm userForm) {
+		if (null == userForm.getUserId()) return new R<Boolean>().failure("用户不存在");
+		//if (null == userForm.getDeptId()) return new R<Boolean>().failure("请选择部门");
 		if (null == userForm.getRoleId()) return new R<Boolean>().failure("请选择角色");
 
 		boolean r = this.userService.updateUserAndRoleDept(userForm);

@@ -23,7 +23,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * Swagger API 文档配置
  * 
- * @author liuweijw
+ * @author luozhonghua
  */
 @Configuration
 @EnableSwagger2
@@ -55,9 +55,9 @@ public class SwaggerConfiguration {
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
 				.title(" Swagger API ")
-				.description("https://github.com/liuweijw/fw-cloud-framework/wiki")
-				.termsOfServiceUrl("https://github.com/liuweijw/fw-cloud-framework")
-				.contact(new Contact("liuweijw", "https://github.com/liuweijw/fw-cloud-framework", "liuweijw.github@foxmail.com"))
+				.description("https://github.com/luozhonghua/fw-cloud-framework/wiki")
+				.termsOfServiceUrl("https://github.com/luozhonghua/fw-cloud-framework")
+				.contact(new Contact("liuweijw", "https://github.com/luozhonghua/fw-cloud-framework", "liuweijw.github@foxmail.com"))
 				.version(ApiTag.TAG_DEFAULT)
 				.build();
 	}

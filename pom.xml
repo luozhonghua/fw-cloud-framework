@@ -34,7 +34,7 @@
 	<packaging>pom</packaging>
 
 	<name>liuweijw cloud framework</name>
-	<url>https://github.com/liuweijw</url>
+	<url>https://github.com/luozhonghua</url>
 	<description>
   		基于springboot + springcloud 全家桶快速构建分布式项目
   	</description>
@@ -53,14 +53,14 @@
 				<role>Owner</role>
 			</roles>
 			<timezone>+8</timezone>
-			<url>https://github.com/liuweijw</url>
+			<url>https://github.com/luozhonghua</url>
 		</developer>
 	</developers>
 
 	<scm>
-		<connection>scm:git:https://github.com/liuweijw/fw-cloud-framework.git</connection>
-		<developerConnection>scm:git:https://github.com/liuweijw/fw-cloud-framework.git</developerConnection>
-		<url>https://github.com/liuweijw/fw-cloud-framework</url>
+		<connection>scm:git:https://github.com/luozhonghua/fw-cloud-framework.git</connection>
+		<developerConnection>scm:git:https://github.com/luozhonghua/fw-cloud-framework.git</developerConnection>
+		<url>https://github.com/luozhonghua/fw-cloud-framework</url>
 		<tag>${project.version}</tag>
 	</scm>
 
@@ -211,7 +211,7 @@
 			</dependency>
 			<!-- fw-cloud-business-commons //business 工程基础依赖 -->
 
-			<!-- 远程依赖 // https://github.com/liuweijw/cloud-commons.git -->
+			<!-- 远程依赖 // https://github.com/luozhonghua/cloud-commons.git -->
 			<dependency>
 				<groupId>com.github.liuweijw.commons</groupId>
 				<artifactId>cloud-commons-utils</artifactId>

@@ -79,6 +79,7 @@ public class SysAdminUsersController extends CommonController{
 	@PostMapping(value = "update", produces = {"application/json;charset=UTF-8"})
 	@ResponseBody
 	public String update(@RequestBody(required=false) SysAdminUser record,HttpServletRequest request) {
+		System.out.println("-----   ----"+record.getId());
 		int row = sysAdminUserService.save(record);
 		if(row == 0) {
 			return FastJsonUtils.resultError(-200, "更新失败", null);

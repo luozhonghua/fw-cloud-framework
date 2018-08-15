@@ -20,7 +20,7 @@
 			<artifactId>fw-cloud-business-commons</artifactId>
 		</dependency>
 
-		<!-- 远程依赖 // https://github.com/liuweijw/cloud-commons.git -->
+		<!-- 远程依赖 // https://github.com/luozhonghua/cloud-commons.git -->
 		<dependency>
 			<groupId>com.github.liuweijw.commons</groupId>
 			<artifactId>cloud-commons-pay</artifactId>

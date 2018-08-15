@@ -14,6 +14,7 @@
     <result column="structure_id" jdbcType="INTEGER" property="structureId" />
     <result column="post_id" jdbcType="INTEGER" property="postId" />
     <result column="status" jdbcType="TINYINT" property="status" />
+      <result column="sname" jdbcType="VARCHAR" property="sname" />
   </resultMap>
   
   
@@ -24,5 +25,11 @@
   			t1.id in (select t2.group_id from sys_admin_access t2 WHERE t2.user_id=#{userId})
   		</if>
   </select>
+
+
+    <select id="selectAll"  resultMap="BaseResultMap">
+      SELECT A.*,B.name as sname FROM sys_admin_user A, sys_admin_structure B where A.structure_id=B.id
+    </select>
+
   
 </mapper>

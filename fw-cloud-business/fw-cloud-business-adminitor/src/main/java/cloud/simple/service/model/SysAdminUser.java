@@ -2,6 +2,7 @@ package cloud.simple.service.model;
 
 import javax.persistence.Column;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import cloud.simple.service.base.BaseEntity;
 
@@ -54,6 +55,17 @@ public class SysAdminUser  extends BaseEntity {
     @Column(name = "`status`")
     private Byte status;
 
+
+    @Transient
+    private String sname;
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
 
     /**
      * 获取管理后台账号

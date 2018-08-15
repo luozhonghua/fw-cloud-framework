@@ -167,9 +167,7 @@ public class LoginController extends CommonController{
 	
 	/**
 	 * 修改密码
-	 * @param old_pwd
-	 * @param new_pwd
-	 * @param session
+
 	 */
 	@PostMapping(value = "/setInfo", produces = "application/json;charset=UTF-8")
 	@ResponseBody
@@ -178,7 +176,7 @@ public class LoginController extends CommonController{
 		@ApiImplicitParam(name = "old_pwd", value ="旧密码", required = true, dataType = "String"),
 		@ApiImplicitParam(name = "new_pwd", value ="新密码", required = true, dataType = "String")
 	})
-	public String setInfo(String old_pwd, String new_pwd){
-		return sysAdminUserService.setInfo(this.getCurrentUser(),old_pwd, new_pwd);
+	public String setInfo(@RequestBody Map<String,Object> params){
+		return sysAdminUserService.setInfo(this.getCurrentUser(),params.get("old_pwd").toString(), params.get("new_pwd").toString());
 	}
 }

@@ -29,7 +29,7 @@ import com.github.liuweijw.exception.CheckedException;
 /**
  * 功能权限切面验证
  * 
- * @author liuweijw
+ * @author luozhonghua
  */
 @Slf4j
 @Component
@@ -57,6 +57,8 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
 		final HandlerMethod handlerMethod = (HandlerMethod) handler;
 		final Method method = handlerMethod.getMethod();
 		final Class<?> clazz = method.getDeclaringClass();
+
+		log.info(  " -- "+com.alibaba.fastjson.JSON.toJSONString(clazz)+" -----");
 
 		String requestURI = request.getRequestURI();
 		String modulePermission = "";
